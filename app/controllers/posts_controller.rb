@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  protect_from_forgery
   def index
     @posts = Post.all.order(created_at: :desc)
     @posts = Post.all
